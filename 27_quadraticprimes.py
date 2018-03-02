@@ -15,7 +15,7 @@ def is_prime(n):
   _primes.add(n)
   return True
 
-def count_primes(a, b):
+def count_quadprimes(a, b):
     n = 1
     while is_prime(n**2 + a * n + b):
        n+=1
@@ -25,8 +25,9 @@ def count_primes(a, b):
 maxprimes = 0
 for a in range(-999, 1000):
     for b in range(-999, 1000):
-        c = count_primes(a, b)
+        c = count_quadprimes(a, b)
         if c > maxprimes:
             maxprimes = c
             solution = a * b
 print solution
+
